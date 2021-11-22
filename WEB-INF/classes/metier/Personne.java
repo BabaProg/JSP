@@ -10,7 +10,7 @@ public class Personne {
 
     @Override
     public String toString() {
-        return "C'est le " + i + "ème Hello World !";
+        return "C'est le " + i + " ème Hello World !";
     }
     
 }
