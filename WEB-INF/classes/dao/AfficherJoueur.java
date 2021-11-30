@@ -9,6 +9,11 @@ import pojo.Joueur;
 
 public class AfficherJoueur {
 
+    private static int jno = 1;
+    private static String pseudo = "";
+    private static String email = "";
+    private static int elo;
+
     public static void main(String[] args) {
         try {
             // enregistrement du driver
@@ -22,9 +27,12 @@ public class AfficherJoueur {
 
             PreparedStatement ps = con.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
-            Joueur joueur = new Joueur();
+
+            Joueur joueur = new Joueur(jno, pseudo, email, elo);
 
             while (rs.next()) {
+                rs.getInt(joueur.getJno());
+
                 System.out.println(joueur.toString());
             }
 

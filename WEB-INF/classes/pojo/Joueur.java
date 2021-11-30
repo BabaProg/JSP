@@ -8,6 +8,13 @@ public class Joueur {
     private String pwd;
     private int elo;
 
+    public Joueur(int jno, String pseudo, String email, int elo) {
+        this.jno = jno;
+        this.pseudo = pseudo;
+        this.email = email;
+        this.elo = elo;
+    }
+
     public int getJno() {
         return jno;
     }
